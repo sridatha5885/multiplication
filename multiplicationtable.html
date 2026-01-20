@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Multiplication Table</title>
+</head>
+<body>
+
+    <h3>Multiplication Table (1 to 10)</h3>
+
+    Enter a number:
+    <input type="text" id="num">
+    <br><br>
+
+    <button onclick="showTable()">Show Table</button>
+
+    <h4>Result:</h4>
+    <div id="result"></div>
+
+    <script>
+        function showTable() {
+            var n = document.getElementById("num").value;
+            var output = "";
+
+            if (n == "" || isNaN(n)) {
+                alert("Please enter a valid number");
+                return;
+            }
+
+            for (var i = 1; i <= 10; i++) {
+                output += n + " x " + i + " = " + (n * i) + "<br>";
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+
+</body>
+</html>
